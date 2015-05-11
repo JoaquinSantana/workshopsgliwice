@@ -1,21 +1,20 @@
-%h1 Listing categories
-
-%table.table
-  %tr
-    %th Name
-    %th
-    %th
-    %th
-
+.row
   - categories.each do |category|
-    %tr
-      %td= category.name
-      %td= link_to 'Show', category
-      - admins_link do
-        %td= link_to 'Edit', edit_category_path(category)
-        %td= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-- admins_link do
-  = link_to 'New Category', new_category_path
+    .col-sm-6.col-md-4
+      .thumbnail
+        %img{:src=>"https://placeimg.com/640/480/tech", :alt=>"#{category.name}"}
+        .caption
+          %h3= link_to category.name, category
+          .category_action
+            .row
+              .col-md-12
+                .pull-left
+                  = link_to 'Show', category, class: "btn btn-default"
+                  - admins_link do
+                    = link_to 'Edit', edit_category_path(category), class: "btn btn-default"
+                    = link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default"
+                .pull-right
+                  %i.fa.fa-cart-arrow-down
+                    = category.products.count                   
+                  %i.fa.fa-cart-arrow-down
+                    = category.products.count 
