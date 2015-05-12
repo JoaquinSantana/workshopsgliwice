@@ -39,12 +39,7 @@ $standard-padding: 70px;
 @import "bootstrap";
 
 
-html {
-  height: 100%;
-}
-
 body {
-  height: 100%;
   background: -webkit-linear-gradient(90deg, #525252 10%, #3d72b4 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #525252 10%, #3d72b4 90%); /* FF3.6+ */
   background:     -ms-linear-gradient(90deg, #525252 10%, #3d72b4 90%); /* IE10 */
@@ -96,6 +91,7 @@ body {
   height: 80px;
   padding: 15px 0;
   border: none;
+  margin-bottom: 200px;
 
   a {
     color: $navabr-text-color;
@@ -169,9 +165,6 @@ body {
   background-color: white;
   background-attachment: scroll;
   background-position: 0% 0%;
-  position: fixed;
-  bottom: 0pt;
-  left: 0pt;
   color: $navabr-text-color;
   padding: 10px 0;
   text-transform: uppercase;
