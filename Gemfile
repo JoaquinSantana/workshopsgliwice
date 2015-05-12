@@ -32,6 +32,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
   gem 'pry'
+  gem 'ffaker'
 end
 
 group :test do
