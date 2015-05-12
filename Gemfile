@@ -20,6 +20,7 @@ gem 'travis'
 gem 'ffaker'
 gem 'konf'
 gem 'font-awesome-rails'
+gem 'annotate'
 
 group :development do
   gem 'spring'
