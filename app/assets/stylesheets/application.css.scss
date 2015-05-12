@@ -15,7 +15,7 @@ $very-light-grey: #F5F5F5;
 $light-blue: #3D72B4;
 $grey-to-blue: #476283;
 
-$standard-padding: 70px;
+$standard-padding: 10px;
 
 
 
@@ -91,7 +91,7 @@ body {
   height: 80px;
   padding: 15px 0;
   border: none;
-  margin-bottom: 200px;
+
 
   a {
     color: $navabr-text-color;
@@ -118,6 +118,12 @@ body {
 }
 
 /** categories **/
+
+.welcome {
+  letter-spacing: 5px;
+  padding-bottom: 50px;
+  padding-top: 30px;
+}
 
 .thumbnail {
   background: rgba(white, .2);
@@ -158,6 +164,7 @@ body {
       }
     }
   }
+
   .fruit {
     height: 218px !important;
   }
@@ -167,6 +174,24 @@ body {
     width: 360px !important;
   }
 
+  .meat {
+    height: 218px !important;
+    width: 360px !important;
+  }
+
+  .vegetable {
+    height: 218px !important;
+    width: 360px !important;
+  }
+  .other {
+    height: 218px !important;
+    width: 360px !important;
+  }
+
+  .spice {
+    height: 218px !important;
+    width: 360px !important;    
+  }
 }
 
   
@@ -178,6 +203,7 @@ body {
   background-position: 0% 0%;
   color: $navabr-text-color;
   padding: 10px 0;
+  margin-top: 50px;
   text-transform: uppercase;
   letter-spacing: -1px;
   @include border-top-shadow;

@@ -8,7 +8,7 @@ def food_types(category_name)
   case category_name
   when "Fruit"
     Faker::Food.fruit
-  when "Herb or spiece"
+  when "Spice"
     Faker::Food.herb_or_spice
   when "Ingredient"
     Faker::Food.ingredient
@@ -44,7 +44,7 @@ User.create(
 
 # => Categories with products
 Category.create(name: "Fruit", image_url: "http://images.all-free-download.com/images/graphiclarge/fruit_pictures_02_hd_pictures_167531.jpg")
-Category.create(name: "Herb or spice", image_url: "http://spiritualityhealth.com/sites/default/files/styles/fb_share/public/100520504-spices.jpg?itok=hj7cRCwS")
+Category.create(name: "Spice", image_url: "http://spiritualityhealth.com/sites/default/files/styles/fb_share/public/100520504-spices.jpg?itok=hj7cRCwS")
 Category.create(name: "Ingredient", image_url: "http://images.all-free-download.com/images/graphiclarge/colorful_spices_194600.jpg")
 Category.create(name: "Meat", image_url: "http://images.all-free-download.com/images/graphiclarge/beef_raw_ingredient_221942.jpg")
 Category.create(name: "Vegetable", image_url: "http://images.all-free-download.com/images/graphiclarge/fruits_and_vegetables_a_collection_of_picture_167168.jpg")
