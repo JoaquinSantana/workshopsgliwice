@@ -43,14 +43,14 @@ User.create(
 )
 
 # => Categories with products
-Category.create(name: "Fruit")
-Category.create(name: "Herb or spice")
-Category.create(name: "Ingredient")
-Category.create(name: "Meat")
-Category.create(name: "Vegetable")
-Category.create(name: "Other")
+Category.create(name: "Fruit", image_url: "http://images.all-free-download.com/images/graphiclarge/fruit_pictures_02_hd_pictures_167531.jpg")
+Category.create(name: "Herb or spice", image_url: "http://spiritualityhealth.com/sites/default/files/styles/fb_share/public/100520504-spices.jpg?itok=hj7cRCwS")
+Category.create(name: "Ingredient", image_url: "http://images.all-free-download.com/images/graphiclarge/colorful_spices_194600.jpg")
+Category.create(name: "Meat", image_url: "http://images.all-free-download.com/images/graphiclarge/beef_raw_ingredient_221942.jpg")
+Category.create(name: "Vegetable", image_url: "http://images.all-free-download.com/images/graphiclarge/fruits_and_vegetables_a_collection_of_picture_167168.jpg")
+Category.create(name: "Other", image_url: "http://images.all-free-download.com/images/graphiclarge/ingredients_picture_167111.jpg")
 
-25.times do |n|
+50.times do |n|
   category = Category.all.sample(1).first
   title = food_types(category.name)
 

@@ -2,13 +2,14 @@
   - categories.each do |category|
     .col-sm-6.col-md-4
       .thumbnail
-        %img{:src=>"https://placeimg.com/640/480/tech", :alt=>"#{category.name}"}
+        %img
+          = image_tag("#{category.name}.jpg", class: category.name.downcase)
         .caption
           %h3= link_to category.name, category
           .category_action
             .row
               .col-md-12
-                .pull-left
+                .pull-lef
                   = link_to 'Show', category, class: "btn btn-default"
                   - admins_link do
                     = link_to 'Edit', edit_category_path(category), class: "btn btn-default"
