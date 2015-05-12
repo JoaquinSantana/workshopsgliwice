@@ -7,4 +7,9 @@ module ApplicationHelper
   def owner_link(object, &block)
     block.call if current_user == object.try(:user)
   end
+  
+  def is_active?(link_path)
+    current_page?(link_path) ? "active" : ""
+  end
+
 end

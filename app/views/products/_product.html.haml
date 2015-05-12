@@ -1,0 +1,9 @@
+.row
+	.col-md-12
+		%li.product_item
+			.product_title
+				= product.title
+			.product_description
+				= truncate(product.description, length: 60)
+			.product_price
+				= product.price

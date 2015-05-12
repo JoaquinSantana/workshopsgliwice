@@ -1,17 +1,24 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = category.name
-
-%p
-  - category.products.each do |product|
-    = product.title
-
-%p
-  %h3 New product
-  = render 'products/form'
-- admins_link do |product|
-  = link_to 'Edit', edit_category_path(category)
-  \|
-= link_to 'Back', categories_path, class: 'btn btn-primary'
+.container.show_category
+	.row
+		%h2.heading
+			= category.name
+		.col-md-8.products_list
+			%ul.list-unstyled
+				= render category.products
+		.col-md-4
+			.row
+				.col-md-12.category_navbar
+					%ul.nav.nav-pills.nav-stacked
+						- Category.all.each do |cat|
+							%li{ :class => is_active?(category_path(cat)) }
+								= link_to cat.name, cat
+	.row.new_product
+		.col-md-12
+			%h2.heading New product
+			= render 'products/form'
+			- admins_link do |product|
+				.row
+					.col-md-6
+						= link_to 'Edit Category', edit_category_path(category), class: 'btn btn-default btn-block'
+					.col-md-6
+						= link_to 'Back', categories_path, class: 'btn btn-default btn-block'
