@@ -30,8 +30,4 @@
       .row
         .col-lg-12
           = yield
-    %footer.footer      
-      .container
-        .row
-          .col-lg-12
-            %h4= AppConfig.workshops_name
+    = render partial: 'shared/footer'
