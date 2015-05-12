@@ -8,8 +8,16 @@
 /*** own variables & mixins ***/
 $text-color: white;
 $navabr-text-color: #3F6EA7;
+
 $dark-grey: #525252;
+$light-grey: lighten($dark-grey, 40%);
+$very-light-grey: #F5F5F5;
 $light-blue: #3D72B4;
+$grey-to-blue: #476283;
+
+$standard-padding: 70px;
+
+
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -163,4 +171,26 @@ body {
   text-transform: uppercase;
   letter-spacing: -1px;
   @include border-top-shadow;
+}
+
+#signup {
+  padding: $standard-padding 0;
+  color: $navabr-text-color;
+  
+  label {
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: 200;
+  }
+
+  input {
+    background-color: $very-light-grey;
+    &:focus {
+      background-color: $light-grey;
+    }
+  }
+
+  abbr {
+    display: none;
+  }
 }
