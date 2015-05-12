@@ -3,6 +3,7 @@ User.destroy_all
 Product.destroy_all
 Review.destroy_all
 
+# => Generate product name based on category
 def food_types(category_name)
   case category_name
   when "Fruit"
@@ -20,7 +21,7 @@ def food_types(category_name)
   end
 end
 
-#   Users accounts
+# => Users accounts
 5.times do 
   User.create(
     firstname: Faker::Name.first_name, 
@@ -31,7 +32,7 @@ end
   )
 end
 
-#admin
+# => Admin
 User.create(
   firstname: 'Janko',
   lastname: 'Muzykant',
@@ -41,7 +42,7 @@ User.create(
   admin: true
 )
 
-#categories with products
+# => Categories with products
 Category.create(name: "Fruit")
 Category.create(name: "Herb or spice")
 Category.create(name: "Ingredient")
@@ -60,7 +61,7 @@ Category.create(name: "Other")
   )
 end
 
-#reviews
+# => Reviews
 Product.all.each do |product|
   rand(10..25).times do 
     Review.create!(
