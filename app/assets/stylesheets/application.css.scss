@@ -18,6 +18,15 @@ $light-blue: #3D72B4;
           border-radius: $radius;
 }
 
+@mixin border-top-shadow {
+  -webkit-box-shadow: 0 -7px 5px -5px #000000;
+  box-shadow: 0 -7px 5px -5px #000000;
+}
+
+@mixin border-down-shadow {
+  -webkit-box-shadow: 0 7px 5px -5px #000000;
+  box-shadow: 0 7px 5px -5px #000000;
+}
 
 @import "bootstrap";
 
@@ -67,8 +76,7 @@ body {
 /** Navbar **/
 
 .navbar-default {
-  -webkit-box-shadow: 0 7px 5px -5px #000000;
-  box-shadow: 0 7px 5px -5px #000000;
+  @include border-down-shadow;
   background-color: white;
   border-radius: 0;
   height: 80px;
@@ -151,7 +159,8 @@ body {
   bottom: 0pt;
   left: 0pt;
   color: $navabr-text-color;
-  -webkit-box-shadow: 0 -10px 10px -10px #000000;
-  box-shadow: 0 -10px 10px -10px #000000;
   padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  @include border-top-shadow;
 }
