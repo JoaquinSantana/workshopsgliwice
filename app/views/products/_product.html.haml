@@ -7,3 +7,36 @@
 				= truncate(product.description, length: 60)
 			.product_price
 				= product.price
+			.product_info
+				= link_to '#', class: 'read_more' do
+					%i.fa.fa-angle-double-down
+
+
+			.row.product_more
+				.product_more_wrapper
+					.col-md-4
+						%img{:class => "img-thumbnail", :src => "http://lorempixel.com/g/400/200/", :alt => 'Product'}
+					.col-md-8
+						%h4= product.description
+					.row.product_reviews
+						.col-md-12{:style => 'margin-top: 15px;'}
+							%h4 Reviews
+							- product.reviews.limit(3).each do |review|
+								.review_wrapper
+									.row
+										.col-md-12.review.content
+											= review.content
+										.col-md-12
+											.pull-left
+												Rating:
+												= review.rating
+											.pull-right
+												%i.fa.fa-clock-o  
+												= review.created_at.strftime("%d %m %Y")
+												Created by:
+												= review.user.email
+							.row
+								.col-md-12
+									= link_to "Read all reviews", category_product_path(product.category, product), class: 'btn btn-default btn-block'
+											
+
