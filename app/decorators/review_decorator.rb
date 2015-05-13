@@ -5,8 +5,8 @@ class ReviewDecorator < Draper::Decorator
     user.firstname + ' ' + user.lastname
   end
 
-  def published_at
-    object.published_at.strftime("%A, %B %e")
+  def created_at
+    object.created_at.strftime("%d %m %Y")
   end
 
 end

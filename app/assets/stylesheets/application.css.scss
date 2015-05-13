@@ -7,7 +7,7 @@
 
 /*** own variables & mixins ***/
 $text-color: white;
-$navabr-text-color: #3F6EA7;
+$navbar-text-color: #3F6EA7;
 
 $dark-grey: #525252;
 $light-grey: lighten($dark-grey, 40%);
@@ -96,7 +96,7 @@ body {
 
 
   a {
-    color: $navabr-text-color;
+    color: $navbar-text-color;
   }
 
   .navbar-brand {
@@ -207,7 +207,7 @@ body {
   bottom: 0;
   width: 100%;
   background-color: white;
-  color: $navabr-text-color;
+  color: $navbar-text-color;
   padding: 10px 0;
   margin-top: 50px;
   text-transform: uppercase;
@@ -217,7 +217,7 @@ body {
 
 .signform {
   padding: $standard-padding 0;
-  color: $navabr-text-color;
+  color: $navbar-text-color;
   
   label {
     text-transform: uppercase;
@@ -225,7 +225,7 @@ body {
     font-weight: 200;
   }
   
-  textarea, input {
+  textarea, input, select {
     background-color: $light-grey;
     &:focus {
       background-color: $dark-grey;
@@ -249,7 +249,7 @@ body {
 .show_category {
   .heading {
     font-weight: 200;
-    border-bottom: 2px solid $navabr-text-color;
+    border-bottom: 2px solid $navbar-text-color;
     margin-bottom: 20px;
   }
 
@@ -258,7 +258,7 @@ body {
   }
 
   .product_item {
-    padding-top: 20px;
+    padding: 20px 0;
 
     .fa {
       color: $text-color;
@@ -309,7 +309,7 @@ body {
     .nav {
       padding-top: 10px;
       li {
-        border: 1px solid $navabr-text-color;
+        border: 1px solid $navbar-text-color;
         a {
           text-align: center;
           text-transform: uppercase;
@@ -325,7 +325,7 @@ body {
       padding-left: 0px;
 
       .signform {
-        color: lighten($navabr-text-color, 20%);
+        color: lighten($navbar-text-color, 20%);
 
         input, textarea {
           background-color: $light-grey;
@@ -342,9 +342,55 @@ body {
 .review_wrapper {
   margin: 15px 0px;
   padding: 15px;
-  background-color: $dark-grey !important;
+  background: rgba($dark-grey, .2) !important;
   border-bottom: 1px solid gray;
   .review.content {
     padding-bottom: 10px;
+  }
+  em {
+    color: $light-grey;
+  }
+}
+
+.product_header {
+  margin: 40px 0;
+  .col-md-7 {
+    padding: 0;
+  }
+
+  .col-md-5 {
+    h2 {
+      margin: 0;
+    }
+
+    .sub_description {
+      margin: 40px 0px;
+    }
+
+    .sub_price {
+      margin: 0;
+      padding-top: 35px;
+      padding-bottom: 14px;
+      font-size: 109px;
+    }
+  }
+}
+
+.reviews_on_product {
+  margin-bottom: 100px;
+  .heading {
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;    
+  }
+
+  .signform {
+    label {
+      color: $text-color;
+    }
+  }
+  em {
+    font-size: 12px;
+    color: $light-grey;
   }
 }

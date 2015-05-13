@@ -9,4 +9,7 @@ $(document).ready(function(){
     $(this).closest('.product_item').find('.product_more').fadeToggle();
     $(this).find('i').toggleClass("fa-angle-double-down fa-angle-double-up");
   });
+
+  $('#review_content').focus();
+  $('#product_title').focus();
 });

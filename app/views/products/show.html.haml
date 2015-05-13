@@ -1,23 +1,21 @@
-%p
-  %b Title:
-  = product.title
-%p
-  %b Description:
-  = product.description
-%p
-  %b Price:
-  = product.price
+.row.product_header
+  .col-md-7
+    %img{:class => "img-thumbnail", :src => "http://lorempixel.com/g/600/400/", :alt => 'Product'}
+  .col-md-5
+    %h2.heading= product.title
+    .sub_description
+      = product.description
+    .sub_price
+      %i.fa.fa-eur
+      = product.price
+    = link_to "Back to #{product.category.name}", product.category, class: 'btn btn-default btn-block'
+    - owner_link(product) do
+      = link_to 'Edit', edit_category_product_path(category.id, product.id), class: 'btn btn-default btn-block'
 
-%p
-  %b Category
-  = product.category.name
+.row.reviews_on_product
+  .col-md-12
+    %h2.heading Reviews
+    = render 'reviews/form'
 
-%h3 Reviews
-= render 'reviews/form'
-
-= render reviews
-
-- owner_link(product) do
-  = link_to 'Edit', edit_category_product_path(category.id, product.id)
-\|
-= link_to 'Back', category_products_path, class: 'btn btn-primary'
+    = render reviews
+    

@@ -1,4 +1,15 @@
-%p= review.content
-%p
-  %b= review.rating
-  %em= review.author
+.review_wrapper
+  .row
+    .col-md-12.review.content
+      = review.content
+    .col-md-12
+      %em
+        .pull-left
+          %i.fa.fa-star
+          Rating:
+          = review.rating
+        .pull-right
+          %i.fa.fa-clock-o  
+          = review.created_at
+          Created by:
+          = review.author

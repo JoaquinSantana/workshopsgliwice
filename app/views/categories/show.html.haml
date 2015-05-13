@@ -12,6 +12,7 @@
 						- Category.all.each do |cat|
 							%li{ :class => is_active?(category_path(cat)) }
 								= link_to cat.name, cat
+						%li= link_to "All categories", categories_path
 	.row.new_product
 		.col-md-12
 			%h2.heading New product
