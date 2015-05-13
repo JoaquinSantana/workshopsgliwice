@@ -213,6 +213,14 @@ body {
   text-transform: uppercase;
   letter-spacing: -1px;
   @include border-top-shadow;
+  .link_to_gh {
+    a {
+      color: $navbar-text-color !important;
+    }
+    i {
+      padding-top: 10px;
+    }
+  }
 }
 
 .signform {
@@ -394,3 +402,4 @@ body {
     color: $light-grey;
   }
 }
+

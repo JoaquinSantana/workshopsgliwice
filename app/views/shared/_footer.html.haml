@@ -4,5 +4,8 @@
       .col-lg-12
         .pull-left
           %h5= AppConfig.workshops_name
-        .pull-right
-          %h5 Tomasz Panek
+        .pull-right.link_to_gh
+          = link_to "https://github.com/JoaquinSantana", target: "_blank" do
+            %i.fa.fa-github
+            = surround '  ', '  ' do
+              Tomasz Panek
