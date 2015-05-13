@@ -422,3 +422,24 @@ body {
 
   }
 }
+.user_wrapper {
+  margin-bottom: 100px;
+}
+.user_header {
+  img {
+    border: 1px solid white;
+  }
+
+  .user_avatar {
+    margin: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid $navbar-text-color
+  }
+}
+
+.user_info {
+  text-align: center;
+  color: $light-grey;
+  margin-bottom: 20px;
+}
