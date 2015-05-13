@@ -403,3 +403,22 @@ body {
   }
 }
 
+.users {
+  margin-bottom: 100px;
+  .users_index_page {
+    padding: 15px;
+    &:hover {
+      h5 {
+        color: $text-color;
+      }
+    }
+    .user_avatar {
+      -webkit-box-shadow: 5px 5px 5px #111;
+      box-shadow: 5px 5px 5px #111;  
+      img {
+        background: rgba($dark-grey, .2);
+      }
+    }
+
+  }
+}

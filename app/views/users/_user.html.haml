@@ -1,5 +1,8 @@
-.col-md-1
-  .user_avatar
-    %img{:class => "img-thumbnail", :src => "http://robohash.org/#{rand(36**2).to_s(36)}.png?size=300x300", :alt => 'User'}
+= link_to user do 
+	.col-md-2.users_index_page
+		.user_avatar
+			%img{:class => "img-thumbnail", :src => "http://robohash.org/#{rand(36**2).to_s(36)}.png?size=300x300", :alt => 'User'}
+		%h5.text-center= user.firstname
+
 
 

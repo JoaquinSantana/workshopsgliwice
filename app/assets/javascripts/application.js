@@ -12,4 +12,6 @@ $(document).ready(function(){
 
   $('#review_content').focus();
   $('#product_title').focus();
+
+  $('.user_wrap').popover();
 });

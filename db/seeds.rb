@@ -22,7 +22,7 @@ def food_types(category_name)
 end
 
 # => Users accounts
-5.times do 
+25.times do 
   User.create(
     firstname: Faker::Name.first_name, 
     lastname: Faker::Name.last_name,
@@ -38,7 +38,7 @@ User.create(
   lastname: 'Muzykant',
   email: 'admin@example.com',
   password: 'test1234',
-  password_confirmation: 'test_1234',
+  password_confirmation: 'test1234',
   admin: true
 )
 
