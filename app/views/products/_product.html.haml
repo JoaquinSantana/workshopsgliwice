@@ -11,12 +11,11 @@
 				= link_to '#', class: 'read_more' do
 					%i.fa.fa-angle-double-down
 
-
 			.row.product_more
 				.product_more_wrapper
 					.col-md-4
 						= link_to category_product_path(product.category, product) do
-							%img{:class => "img-thumbnail", :src => "http://lorempixel.com/g/400/250/", :alt => 'Product'}
+							%img{:class => "img-thumbnail", :src => "http://lorempixel.com/400/250/food", :alt => 'Product'}
 					.col-md-8
 						%h4= product.description
 					.row.product_reviews
