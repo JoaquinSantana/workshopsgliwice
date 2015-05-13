@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :update, :destroy]
   before_action :check_owner, only: [:edit, :update, :destroy]
   expose(:category)
-  expose(:products)
+  expose(:products) { category.products}
   expose(:product)
   expose(:review) { Review.new }
   expose_decorated(:reviews, ancestor: :product)

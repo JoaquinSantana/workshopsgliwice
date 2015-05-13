@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
     strategy DecentExposure::StrongParametersStrategy
   end
 
+  rescue_from ActiveRecord::RecordNotFound do
+    flash[:danger] = 'Resource not found.'
+    redirect_back_or root_path
+  end
+
 
 
   protect_from_forgery with: :exception
@@ -18,5 +23,9 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) { 
       |u| u.permit(:firstname, :lastname, :email, :password, :password_confirmation)
     }
+  end
+
+  def redirect_back_or(path)
+    redirect_to request.referer || path
   end
 end

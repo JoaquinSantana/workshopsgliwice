@@ -328,7 +328,7 @@ body {
   }
 
   .new_product {
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     .col-md-12 {
       padding-left: 0px;
 
@@ -402,7 +402,11 @@ body {
     color: $light-grey;
   }
 }
+.registration {
+  margin-bottom: 100px !important;
+}
 
+/** Users index page && show page **/
 .users {
   margin-bottom: 100px;
   .users_index_page {
