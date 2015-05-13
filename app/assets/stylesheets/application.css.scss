@@ -447,3 +447,16 @@ body {
   color: $light-grey;
   margin-bottom: 20px;
 }
+
+.table-hover {
+  background-color: transparent;
+  tr {
+    &:hover {
+      color: $dark-grey;
+      background-color: $light-grey;
+      a {
+        color: $dark-grey;
+      }
+    }
+  }
+}

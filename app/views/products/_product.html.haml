@@ -21,18 +21,23 @@
 					.row.product_reviews
 						.col-md-12{:style => 'margin-top: 15px;'}
 							%h4 Reviews
-							- product.reviews.limit(3).each do |review|
-								.review_wrapper
-									.row
-										.col-md-12.review.content
-											= review.content
-										.col-md-12
-											.pull-left
-												%em
-													Created by:
-													= review.user.email
-							.row
-								.col-md-12
-									= link_to "Read all reviews", category_product_path(product.category, product), class: 'btn btn-default btn-block'
-											
+							- if product.reviews.exists?
+								- product.reviews.limit(3).each do |review|
+									.review_wrapper
+										.row
+											.col-md-12.review.content
+												= review.content
+											.col-md-12
+												.pull-left
+													%em
+														Created by:
+														= review.user.email
+								.row
+									.col-md-12
+										= link_to "Read all reviews", category_product_path(product.category, product), class: 'btn btn-default btn-block'
+							- else
+								%h5 This product does not have any reviews
+								.row
+									.col-md-12
+										= link_to "Be the first to add reviews", category_product_path(product.category, product), class: 'btn btn-default btn-block'			
 
