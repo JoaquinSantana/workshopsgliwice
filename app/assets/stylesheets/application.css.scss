@@ -36,6 +36,10 @@ $standard-padding: 10px;
 
 @import "bootstrap";
 
+html {
+  min-height: 100%;
+  position: relative;
+}
 
 body {
   background: -webkit-linear-gradient(90deg, #525252 10%, #3d72b4 90%); /* Chrome 10+, Saf5.1+ */
@@ -117,6 +121,10 @@ body {
 
 /** categories **/
 
+.categories_wrapper {
+  margin-bottom: 100px;
+}
+
 .welcome {
   letter-spacing: 5px;
   padding-bottom: 50px;
@@ -195,6 +203,8 @@ body {
   
 
 .footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   background-color: white;
   color: $navabr-text-color;
